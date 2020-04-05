@@ -84,7 +84,7 @@ void * testStack(void * arg)
 
 	for (int i = 0; i < iterations; i++)
 	{
-		if (testing == 1) 
+		if (testing)
 		{
 			stack->push(i, thread_num);
 			stack->pop(thread_num);
@@ -101,6 +101,11 @@ void * testStack(void * arg)
 			stack->pop();
 			stack->push(i);
 			stack->pop();
+		}
+
+		if (testing)
+		{
+			stack->print();
 		}
 	}
 	pthread_exit(0);
