@@ -217,7 +217,7 @@ void write_row(int idx, char * action)
 		fprintf(csv, ",");
 	}
 	fprintf(csv, "%s", action);
-	for (int i = idx; i < NUM_THREADS; i++)
+	for (int i = idx; i < NUM_THREADS - 1; i++)
 	{
 		fprintf(csv, ",");
 	}
