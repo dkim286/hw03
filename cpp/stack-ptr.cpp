@@ -1,6 +1,4 @@
-#include <iostream>
 #include <fstream>
-#include <string>
 #include <vector>
 
 #include <pthread.h>
@@ -136,13 +134,13 @@ void handle_args(int argc, char ** argv)
 		}
 		else if (strcmp(argv[i], "--demo") == 0 || strcmp(argv[i], "-d") == 0)
 		{
-			testing = 1;
+			testing = true;
 			num_threads = 10;
 			iterations = 5;
 		}
 		else if (strcmp(argv[i], "--force") == 0 || strcmp(argv[i], "-f") == 0)
 		{
-			testing = 1;
+			testing = true;
 		}
 		else if (strcmp(argv[i], "--normal") == 0 || strcmp(argv[i], "-n") == 0)
 		{
@@ -159,7 +157,7 @@ void handle_args(int argc, char ** argv)
 void write_header(std::ostream & out)
 {
 	out << "thread_0";
-	for (int i = 0; i < num_threads; i++)
+	for (int i = 1; i < num_threads; i++)
 	{
 		out << ",thread_" << i;
 	}
