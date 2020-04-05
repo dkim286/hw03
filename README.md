@@ -18,7 +18,7 @@ $ gcc -pthread stack-ptr.c -o stack-ptr
 $ ./stack-ptr [OPTION]
 ```
 
-Running it without args outputs nothing useful. It "just werks."
+Running it without args outputs nothing useful. It "just werks" as per assignment specification.
 
 ### Optional arguments
 
@@ -31,6 +31,6 @@ Running it without args outputs nothing useful. It "just werks."
 * `-n, --normal`
 	* Default program behavior. Added for the sake of documentation.
 
-* -h, --help`
+* `-h, --help`
 	* Display something similar to this section on terminal.
 
