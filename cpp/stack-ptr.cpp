@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <stack>
 #include <vector>
 
 #include <pthread.h>
