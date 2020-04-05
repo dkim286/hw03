@@ -23,7 +23,6 @@ struct Package
 {
 	Stack * stack;
 	int thread_num;
-	std::ostream * out;
 };
 
 // misc functions
@@ -49,7 +48,7 @@ int main(int argc, char ** argv)
 	Stack * stack = new Stack();
 	for (int i = 0; i < num_threads; i++)
 	{
-		packages.at(i) = Package{stack, i, &csv};
+		packages.at(i) = Package{stack, i};
 	}
 
 	// create threads
