@@ -18,7 +18,7 @@ $ gcc -pthread stack-ptr.c -o stack-ptr
 $ ./stack-ptr [OPTION]
 ```
 
-Running it without args outputs nothing useful. It "just werks" as per assignment specification.
+Running it without args outputs nothing useful. It "just werks" as per assignment specification. I think. It's really hard to tell. 
 
 ### Optional arguments
 
