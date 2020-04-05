@@ -131,6 +131,7 @@ value_t pop(StackNode **top)
 	if (is_empty(*top)) 
 	{
 		printf("stack empty!\n");
+		pthread_mutex_unlock(&mutex);
 		return (value_t)0;
 	}
 
