@@ -98,13 +98,18 @@ bool Stack::isEmpty()
 
 void Stack::print()
 {
+	pthread_mutex_lock(&mutex);
+
 	std::cout << "Current stack: ";
 	Node * ptr = top_ptr;
 	while (ptr)
 	{
 		std::cout << ptr->getValue() << " ";
+		ptr = ptr->getNext();
 	}
 	std::cout << std::endl;
+
+	pthread_mutex_unlock(&mutex);
 }
 
 void write_row(int proc, const std::string & action)
