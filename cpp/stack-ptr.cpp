@@ -103,7 +103,7 @@ void * testStack(void * arg)
 			stack->pop();
 		}
 
-		if (testing)
+		if (testing && num_threads <= 10)
 		{
 			stack->print();
 		}
@@ -124,16 +124,16 @@ void handle_args(int argc, char ** argv)
 		if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0)
 		{
 			printf("Usage: %s [OPTION]\n"
-					"A thread-safe stack in action.\n"
-					"Running '%s' WITHOUT '-d, --demo' will spawn 200 threads as per homework specs.\n\n"
-					"Optional arguments:\n"
-					"  -d, --demo    Run this program in demo mode with a small number of threads.\n" 
-					"                 This mode writes a timeline of events to 'log.csv' in the enclosing dir.\n"
-					"  -f, --force   Run all 200 threads, 500 iterations, AND generate the 'log.csv' file.\n"
-					"                 That's at least 120MB of pure text. PLEASE think twice before doing this.\n"
-					"  -n, --normal  Run this program in normal mode (no 'log.csv'). This is the default behavior.\n"
-					"  -h, --help    Display this help message\n",
-					argv[0], argv[0]);
+				"A thread-safe stack in action.\n"
+				"Running '%s' WITHOUT '-d, --demo' will spawn 200 threads as per homework specs.\n\n"
+				"Optional arguments:\n"
+				"  -d, --demo    Run this program in demo mode with a small number of threads.\n" 
+				"                 This mode writes a timeline of events to 'log.csv' in the enclosing dir.\n"
+				"  -f, --force   Run all 200 threads, 500 iterations, AND generate the 'log.csv' file.\n"
+				"                 That's at least 120MB of pure text. PLEASE think twice before doing this.\n"
+				"  -n, --normal  Run this program in normal mode (no 'log.csv'). This is the default behavior.\n"
+				"  -h, --help    Display this help message\n",
+				argv[0], argv[0]);
 			exit(0);
 		}
 		else if (strcmp(argv[i], "--demo") == 0 || strcmp(argv[i], "-d") == 0)
