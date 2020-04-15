@@ -1,0 +1,66 @@
+$ ./stack-ptr --help
+Usage: ./stack-ptr [OPTION]
+A thread-safe stack in action.
+Running './stack-ptr' WITHOUT '-d, --demo' will spawn 200 threads as per homework specs.
+
+Optional arguments:
+  -d, --demo    Run this program in demo mode with a small number of threads.
+                 This mode writes a timeline of events to 'log.csv' in the enclosing dir.
+  -f, --force   Run all 200 threads, 500 iterations, AND generate the 'log.csv' file.
+                 That's at least 120MB of pure text. PLEASE think twice before doing this.
+  -n, --normal  Run this program in normal mode (no 'log.csv'). This is the default behavior.
+  -h, --help    Display this help message
+
+$ ./stack-ptr -d
+Current stack: 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 4 2 0 1 
+Current stack: 4 2 0 1 
+Current stack: 4 2 0 1 
+Current stack: 4 2 0 1 
+Current stack: 4 2 0 1 
+Current stack: 4 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 0 2 0 1 
+Current stack: 0 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 2 0 1 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 0 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 1 
+Current stack: 
+Current stack: 
+Current stack: 
+Current stack: 
+Current stack: 
+
+$ ./stack-ptr	# no output

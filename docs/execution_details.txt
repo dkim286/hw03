@@ -1,0 +1,50 @@
+Building -----------------------------------------------------------------------
+
+    If the executable are missing for C version of the assignment, run
+    $ gcc -pthread stack-ptr.c -o stack-ptr
+
+    If it's missing for the C++ version of the assignment, run 
+    $ g++ -pthread *.h *.cpp -o stack-ptr
+
+
+Demo mode ----------------------------------------------------------------------
+
+    Running the program in "demo mode" is probably the quickest way to test to
+    see if the program functions correctly: 
+    
+    $ ./stack-ptr --demo
+
+    This runs the program with a limited number of threads and outputs two
+    things:
+
+    1. Print to stdout with the state of the stack at a given moment
+    2. 'log.csv' file in the project root directory. 
+
+
+stdout -------------------------------------------------------------------------
+
+    The standard output to terminal is essentially the state of the stack after
+    completing a number of alternating push/pop operations. 
+
+    Current stack: 0 0 0 
+    Current stack: 0 0 0 
+    Current stack: 0 0 
+    ...
+
+
+log.csv ------------------------------------------------------------------------
+
+    This "log" file contains a timeline of events in csv format. The header row
+    (thread_0, thread_1, ...) indicates the thread numbers, and the subsequent
+    rows represent an event taking place at a unit of time.
+
+    | thread_0 | thread_1 | thread_2 | ...
+    |----------|----------|----------|
+    | push     |          |          | ...
+    | POP      |          |          | ...
+    |          |          | push     | ...
+
+
+More ---------------------------------------------------------------------------
+
+    Run './stack-ptr --help' for a list of other options. 
