@@ -2,7 +2,7 @@
 
 ## Description
 
-A thread-safe version of whatever the assignment was uploaded with. Developed with [Chris](https://github.com/cdnutter).
+A thread-safe version of whatever the assignment was uploaded with. Developed in conjunction with [Chris](https://github.com/cdnutter).
 
 ## Building
 
